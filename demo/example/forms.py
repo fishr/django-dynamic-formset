@@ -18,7 +18,7 @@ class OrderedItemForm(models.ModelForm):
         model = OrderedItem
         fields = '__all__'
 
-class AutoCompleteOrderedItemForm(models.ModelForm):
+class AutoCompleteOrderedItemForm(forms.ModelForm):
     """
     Display the Ordered Item form with an autocomplete textbox for the
     Products instead of the Dropdown List.
@@ -100,7 +100,7 @@ EventFormset = formsets.formset_factory(EventForm, extra=2)
 
 from ajax_select.fields import AutoCompleteSelectField
 
-class AutoCompleteSelectFieldForm(models.ModelForm):
+class AutoCompleteSelectFieldForm(forms.ModelForm):
     """
     Use the `AutoCompleteSelectField` to replace the default select field.
     """
